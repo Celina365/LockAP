@@ -21,6 +21,11 @@
         src: url(Fonts/Diogenes.ttf);
     }
 
+    @font-face {
+        font-family: "Altroned";
+        src: url(Fonts/Altroned.ttf);
+    }
+
     .button {
         color: red;
         text-shadow: 0 0 10px red
@@ -54,7 +59,7 @@
         background-color: #343434;
         border-color: #000;
         color: #d8d8d8;
-        font-family: "Diogenes";
+        font-family: "Altroned";
     }
 
     input[type=text]:focus,
@@ -94,7 +99,7 @@
         background-image: linear-gradient(rgb(255, 255, 255), rgb(165, 165, 165), rgb(255, 255, 255), rgb(100, 100, 100));
         color: transparent;
         background-clip: text;
-        font-family: "Diogenes";
+        font-family: "Altroned";
     }
 
 </style>
@@ -105,7 +110,7 @@
     <main>
         <img src="Images/TalosTop.png" alt="Talos logo" class="center-image">
             <div id="uidlist">
-                <h2>Stored UIDs:</h2>
+                <h2>Stored UIDs</h2>
                 <table id="uidtable">
                     <tr>
                         <th>Name</th>
@@ -113,15 +118,15 @@
                         <th>Remove</th>
                     </tr>
                 </table>
-                <h3 id="loading">Loading UIDs, please wait...</h3>
+                <h3 id="loading">Loading UIDs please wait</h3>
             </div>
             <div id="uidadd">
-                <h2>Add UID:</h2>
+                <h2>Add UID</h2>
                 <form action="/add" method="get">
-                    <div id="uidaddname"><label for="name">Name:</label> <input type="text" name="name" id="name"
+                    <div id="uidaddname"><label for="name">Name</label> <input type="text" name="name" id="name"
                             required>
                     </div>
-                    <div id="uidadduid"><label for="uid">UID:</label> <input type="text" name="uid" id="uid" required>
+                    <div id="uidadduid"><label for="uid">UID</label> <input type="text" name="uid" id="uid" required>
                     </div>
                     <input type="submit" value="Add">
                 </form>
