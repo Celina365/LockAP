@@ -2,7 +2,7 @@
 <html>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <style>
-    main{
+    main {
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -10,7 +10,10 @@
     }
 
     body {
-        background-image: linear-gradient(to right, #2c2b2b, #1a1b1b, #2c2c2c, #403f3f, #2b2b2b, #252525)
+        /* background-image: linear-gradient(to right, #2c2b2b, #1a1b1b, #2c2c2c, #403f3f, #2b2b2b, #252525) */
+        background-image: url("Images/Wallpaper.png");
+        background-repeat: round;
+        background-size: 100%;
     }
 
     .button {
@@ -23,9 +26,9 @@
     }
 
     #uidtable {
-    display: flex;
-    justify-content: center;
-}
+        display: flex;
+        justify-content: center;
+    }
 
     #uidaddname,
     #uidadduid {
@@ -44,11 +47,14 @@
         margin: auto;
         display: block;
         background-color: #343434;
-        border-color: #000
+        border-color: #000;
+        color: #d8d8d8;
     }
 
-    input[type=text]:focus {
-        outline: 0
+    input[type=text]:focus,
+    input[type=text]:hover {
+        outline: 0;
+        border-color: #ddd;
     }
 
     input[type=submit] {
@@ -56,48 +62,64 @@
     }
 
     input[type=submit]:hover {
-        color: #000;
+        color: #ffffff;
+        border-color: #aaaaaa;
     }
 
     .center-image {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 200px;
+        width: 80%;
+        max-width: 500px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     /* shiny text */
-    h2, h3, th, label, input[type=submit] {
+    h2,
+    h3,
+    th,
+    label,
+    input[type=submit] {
         color: silver;
-        background-image: linear-gradient(rgb(161, 161, 161), rgb(136, 136, 136),rgb(126, 126, 126), rgb(136, 136, 136));
+        background-image: linear-gradient(rgb(255, 255, 255), rgb(165, 165, 165), rgb(255, 255, 255), rgb(100, 100, 100));
         color: transparent;
         background-clip: text;
     }
-</style>
 
+</style>
+<!-- Title+favicon -->
+<title>Talos</title>
+<link rel="icon" type="image/x-icon" href="/images/Favicon.ico">
 <body>
     <main>
-        <img src="Images/Talos.png" alt="Talos logo" class="center-image" >
-        <div id="uidlist">
-            <h2>Stored UIDs:</h2>
-            <table id="uidtable">
-                <tr>
-                    <th>Name</th>
-                    <th>UID</th>
-                    <th>Remove</th>
-                </tr>
-            </table>
-            <h3 id="loading">Loading UIDs, please wait...</h3>
-        </div>
-        <div id="uidadd">
-            <h2>Add UID:</h2>
-            <form action="/add" method="get">
-                <div id="uidaddname"><label for="name">Name:</label> <input type="text" name="name" id="name" required>
-                </div>
-                <div id="uidadduid"><label for="uid">UID:</label> <input type="text" name="uid" id="uid" required></div>
-                <input type="submit" value="Add">
-            </form>
-        </div>
+        <img src="Images/TalosTop.png" alt="Talos logo" class="center-image">
+            <div id="uidlist">
+                <h2>Stored UIDs:</h2>
+                <table id="uidtable">
+                    <tr>
+                        <th>Name</th>
+                        <th>UID</th>
+                        <th>Remove</th>
+                    </tr>
+                </table>
+                <h3 id="loading">Loading UIDs, please wait...</h3>
+            </div>
+            <div id="uidadd">
+                <h2>Add UID:</h2>
+                <form action="/add" method="get">
+                    <div id="uidaddname"><label for="name">Name:</label> <input type="text" name="name" id="name"
+                            required>
+                    </div>
+                    <div id="uidadduid"><label for="uid">UID:</label> <input type="text" name="uid" id="uid" required>
+                    </div>
+                    <input type="submit" value="Add">
+                </form>
+            </div>
+        <img src="Images/TalosBottom.png" alt="Talos logo" class="center-image" style="margin-top: 10px;">
     </main>
 </body>
 
