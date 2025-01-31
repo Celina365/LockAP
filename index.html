@@ -1,110 +1,12 @@
 <!DOCTYPE html>
 <html>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<style>
-    main {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    body {
-        /* background-image: linear-gradient(to right, #2c2b2b, #1a1b1b, #2c2c2c, #403f3f, #2b2b2b, #252525) */
-        background-image: url("Images/Wallpaper.png");
-        background-repeat: round;
-        background-size: 100%;
-    }
-
-    @font-face {
-        font-family: "Diogenes";
-        src: url(Fonts/Diogenes.ttf);
-    }
-
-    @font-face {
-        font-family: "Altroned";
-        src: url(Fonts/Altroned.ttf);
-    }
-
-    .button {
-        color: red;
-        text-shadow: 0 0 10px red
-    }
-
-    .button:hover {
-        text-shadow: 0 0 10px red, 0 0 20px red, 0 0 35px red, 0 0 30px red
-    }
-
-    #uidtable {
-        display: flex;
-        justify-content: center;
-    }
-
-    #uidaddname,
-    #uidadduid {
-        padding-bottom: 12px
-    }
-
-    label {
-        align-items: center;
-        margin: auto;
-        display: block;
-        margin-bottom: 2px
-    }
-
-    input[type=text] {
-        align-items: center;
-        margin: auto;
-        display: block;
-        background-color: #343434;
-        border-color: #000;
-        color: #d8d8d8;
-        font-family: "Altroned";
-    }
-
-    input[type=text]:focus,
-    input[type=text]:hover {
-        outline: 0;
-        border-color: #ddd;
-    }
-
-    input[type=submit] {
-        background-color: #3b3a3a
-    }
-
-    input[type=submit]:hover {
-        color: #ffffff;
-        border-color: #aaaaaa;
-    }
-
-    .center-image {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 80%;
-        max-width: 500px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    /* shiny text */
-    h2,
-    h3,
-    th,
-    label,
-    input[type=submit] {
-        color: silver;
-        background-image: linear-gradient(rgb(255, 255, 255), rgb(165, 165, 165), rgb(255, 255, 255), rgb(100, 100, 100));
-        color: transparent;
-        background-clip: text;
-        font-family: "Altroned";
-    }
-</style>
-<!-- Title+favicon -->
-<title>Talos</title>
-<link rel="icon" type="image/x-icon" href="/images/Talos_favicon.ico">
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link href="/css/mainstyle.css" rel="stylesheet" type="text/css" charset="utf-8" />
+        <!-- Title+favicon -->
+        <title>Talos</title>
+        <link rel="icon" type="image/x-icon" href="/images/Talos_favicon.ico">
+    </head>
 
 <body>
     <main>
@@ -125,11 +27,11 @@
             <form action="/add" method="get">
                 <div id="uidaddname">
                     <label for="name">Name</label> 
-                    <input type="text" name="name" id="name" autocomplete="off" required>
+                    <input type="text" name="name" id="name" required>
                 </div>
                 <div id="uidadduid">
                     <label for="uid">UID</label> 
-                    <input type="text" name="uid" id="uid" autocomplete="off" required>
+                    <input type="text" name="uid" id="uid" required>
                 </div>
                 <input type="submit" value="Add">
             </form>

@@ -1,0 +1,121 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* General CSS */
+main {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+body {
+    background-image: url("/Images/Wallpaper.png");
+    background-repeat: round;
+    background-size: 100%;
+}
+
+#uidtable {
+    display: flex;
+    justify-content: center;
+}
+
+#uidaddname,
+#uidadduid {
+    padding-bottom: 12px
+}
+
+/* Fonts */
+@font-face {
+    font-family: "Diogenes";
+    src: url(/Fonts/Diogenes.ttf);
+}
+
+@font-face {
+    font-family: "Altroned";
+    src: url(/Fonts/Altroned.ttf);
+}
+
+/* Forms */
+/* Buttons */
+.button {
+    color: red;
+    text-shadow: 0 0 10px red
+}
+
+.button:hover {
+    text-shadow: 0 0 10px red, 0 0 20px red, 0 0 35px red, 0 0 30px red
+}
+
+/* Inputs + Labels */
+label {
+    align-items: center;
+    margin: auto;
+    display: block;
+    margin-bottom: 2px
+}
+
+input[type=text] {
+    align-items: center;
+    margin: auto;
+    display: block;
+    background-color: #343434;
+    border-color: #000;
+    color: #d8d8d8;
+    font-family: "Altroned";
+}
+
+input[type=text]:focus,
+input[type=text]:hover {
+    outline: 0;
+    border-color: #ddd;
+}
+
+input[type=submit] {
+    background-color: #3b3a3a
+}
+
+input[type=submit]:hover {
+    color: #ffffff;
+    border-color: #aaaaaa;
+}
+
+/* Change Autocomplete styles in Chrome and Safari */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 1000px #343434 inset !important;
+    -webkit-text-fill-color: #d8d8d8 !important;
+}
+
+
+.center-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* shiny text */
+h2,
+h3,
+th,
+label,
+input[type=submit] {
+    color: silver;
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(165, 165, 165), rgb(255, 255, 255), rgb(100, 100, 100));
+    color: transparent;
+    background-clip: text;
+    font-family: "Altroned";
+}
