@@ -15,6 +15,11 @@ body {
     background-size: 100%;
 }
 
+@font-face {
+    font-family: "Altroned";
+    src: url(/Fonts/Altroned.ttf);
+}
+
 #uidtable {
     display: flex;
     justify-content: center;
@@ -25,26 +30,18 @@ body {
     padding-bottom: 12px
 }
 
-/* Fonts */
-@font-face {
-    font-family: "Diogenes";
-    src: url(/Fonts/Diogenes.ttf);
-}
 
-@font-face {
-    font-family: "Altroned";
-    src: url(/Fonts/Altroned.ttf);
-}
 
 /* Forms */
 /* Buttons */
 .button {
-    color: red;
-    text-shadow: 0 0 10px red
+    color: rgb(210, 210, 210);
+    text-shadow: 0 0 10px rgb(180, 180, 180);
+    font-family: "Altroned";
 }
 
 .button:hover {
-    text-shadow: 0 0 10px red, 0 0 20px red, 0 0 35px red, 0 0 30px red
+    text-shadow: 0 0 10px rgb(155, 155, 155), 0 0 20px rgb(129, 129, 129), 0 0 35px rgb(128, 128, 128), 0 0 30px rgb(149, 149, 149)
 }
 
 /* Inputs + Labels */
@@ -112,6 +109,7 @@ h2,
 h3,
 th,
 label,
+td,
 input[type=submit] {
     color: silver;
     background-image: linear-gradient(rgb(255, 255, 255), rgb(165, 165, 165), rgb(255, 255, 255), rgb(100, 100, 100));
