@@ -18,6 +18,11 @@
                     <th>Name</th>
                     <th>UID</th>
                     <th>Remove</th>
+                    <tr>
+                        <td>Alice</td>
+                        <td>00.00.00.00</td>
+                        <td>X</td>
+                    </tr>
                 </tr>
             </table>
             <h3 id="loading">Loading UIDs please wait</h3>
@@ -73,12 +78,12 @@
         });
 
         document.querySelectorAll("td:nth-child(1)").forEach(cell => {
-            cell.innerHTML =cell.innerHTML + '<span style="font-family: Arial; font-size: 30px;"> </span>';
+            cell.innerHTML = cell.innerHTML + '<span style="font-family: Arial; font-size: 30px;"> </span>';
         });
 
         document.querySelectorAll("td:nth-child(3)").forEach(cell => {
-            cell.innerHTML =cell.innerHTML + '<span style="font-family: Arial; font-size: 30px;"> </span>';
-        });
+            cell.innerHTML = cell.innerHTML + '<span style="font-family: Arial; font-size: 30px;"> </span>';
+    });
 </script>
 
 </html>
